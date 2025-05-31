@@ -1,0 +1,18 @@
+*{
+    color: white;
+}
+.cards{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  background: gray;
+  padding: 10px;
+  border-radius: 10px;
+}
+.card__id{
+  font-size: small;
+}

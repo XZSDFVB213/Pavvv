@@ -1,0 +1,17 @@
+<form [formGroup]="filterForm" class="filter-form">
+  <input formControlName="title" placeholder="Search by title" />
+  <input formControlName="author" placeholder="Search by author" />
+</form>
+
+<button mat-flat-button color="accent" (click)="openDialog()">Add Book</button>
+
+<div class="cards">
+  @for (book of bookData; track book.id) {
+    <div class="card">
+      <h2 class="card__id">Id: {{ book.id }}</h2>
+      <h1 class="card__title">Title: {{ book.title }}</h1>
+      <h3 class="card__author">Author: {{ book.author }}</h3>
+      <a [routerLink]="['/book', book.id]">Подробнее</a>  
+    </div>
+  }
+</div>
